@@ -1,79 +1,73 @@
 # Project3_Group4
 
-Datasource:
-https://www.kaggle.com/datasets/ashishkumarjayswal/titanic-datasets
+**Project Participants:** Joseph Milotta, Luis Carlos Lopez, Leonardo Rios, & Oliver von Mizener
 
-From the link above:
-"
-About Dataset
-The Titanic Survival dataset is a widely-used dataset in the field of machine learning and data analysis. It contains information about the passengers on board the RMS Titanic, including whether they survived the shipwreck or not. Here is a description of the typical fields you may find in the Titanic Survival dataset:
+## Datasource
+[The Titanic Dataset on Kaggle](https://www.kaggle.com/datasets/ashishkumarjayswal/titanic-datasets)  
 
-Passenger Information:
-This section includes data about the passengers, such as their names, gender, age, and passenger class (First, Second, or Third Class). This information provides insights into the demographics of the passengers on board.
+### About the Dataset
+The Titanic Survival dataset is a widely-used dataset for machine learning and data analysis. It provides rich information about passengers, including:
+- **Passenger Information:** Names, gender, age, and passenger class (First, Second, or Third Class).
+- **Ticket Information:** Ticket numbers, fares paid, and cabin details, which offer insights into ticket prices and cabin locations.
+- **Travel Details:** Port of embarkation (Cherbourg, Queenstown, or Southampton) and destination.
+- **Family Relationships:** Family groups on board, represented by siblings/spouses (SibSp) and parents/children (Parch) fields.
+- **Survival Status:** Binary variable indicating whether a passenger survived (1) or did not survive (0).  
+This dataset is often used for predictive modeling to explore factors influencing survival rates during the Titanic disaster.  
 
-Ticket Information:
-Ticket information includes details about the passengers' ticket numbers, fares paid, and cabin information. This data can be used to analyze patterns related to ticket prices and cabin locations.
+---
 
-Travel Details:
-Travel details provide information about the passengers' travel arrangements, such as the port of embarkation (Cherbourg, Queenstown, or Southampton) and the destination of the journey.
+## Contents of Repository
+- `titanic.pynb`: Jupyter Notebook containing analysis and visualizations.
+- `titanic.db`: SQL database containing cleaned and transformed Titanic data.
+- `Resources/`: Folder containing the cleaned CSV data pulled from the source.
 
-Family Relationships:
-This section includes data about the family relationships of passengers, including the number of siblings/spouses (SibSp) and the number of parents/children (Parch) they were traveling with. These variables can be used to analyze the presence of family groups on board.
+---
 
-Survival Status:
-The survival status field indicates whether a passenger survived the Titanic disaster or not. This binary variable is typically represented as 1 (survived) or 0 (did not survive). This field serves as the target variable for prediction models.
+## Project Requirements and Fulfillments
 
-Other Relevant Factors:
-Additional fields may be included to capture any other relevant factors that could potentially affect survival rates. These may include variables such as passenger ID, lifeboat numbers (if applicable), and any special circumstances related to the passenger's survival.
+### **Database**
+- **Requirement:** Use at least one database (SQL or NoSQL) containing at least 100 records.
+- **Fulfillment:** Dataset includes 890 rows. We utilized a SQL database for table creation and data querying.
 
-The Titanic Survival dataset is often used as a training dataset for classification and predictive modeling tasks. Researchers and data scientists use this dataset to explore patterns and factors that influenced the survival rates of passengers on the Titanic. By analyzing this dataset, one can gain insights into the demographics, socio-economic factors, and strategies for survival during the shipwreck."
+### **Data Engineering**
+- **Requirement:**
+  - Include at least two tables or collections.
+  - ETL workflows for data transformation and loading.
+  - Use a new library not covered in class.
+- **Fulfillment:**
+  - We created "Titanic_Cleaned.csv" through data cleanup and loaded it into a SQL database.
+  - ETL workflow implemented for transforming and loading data.
+  - **Library Used:** Dash for visualization and interactivity.
 
+### **Visualizations**
+- **Requirement:** Include multiple visualizations using Python or JavaScript libraries.
+- **Fulfillment:**
+  - A range of visualizations created, including bar charts, scatter plots, pair plots, line graphs, and boxen plots.
+  - **New Visualization Library:** Dash for user-friendly web analytics.
 
+### **User Interaction**
+- **Requirement:** Provide user interaction through HTML menus, dropdowns, or filters.
+- **Fulfillment:** Dash was used to create an interactive web browser view with dropdown usability.
 
-Project Requirements and Fulfilments
+### **Data Serving**
+- **Requirement:** Provide a method to display or serve data.
+- **Fulfillment:** Used pandas DataFrames throughout and Flask API for JSON output where necessary.
 
-Use at least one database (SQL or NoSQL, e.g., PostgreSQL, MongoDB, SQLite)
-Must contain at least 100 records
- Dataset contains 890 rows of data
+### **Final Visualization**
+- **Requirement:** Include at least three views.
+- **Fulfillment:** Five visualizations included in the presentation.
 
-For Data Engineering: include at least two tables or collections
-Include ETL workflows to transform and load data into the database (Data Engineering)
-Use at least one JavaScript or Python library not covered in class
- We utilized data cleanup methods to create "Titanic_Cleaned.csv" and loaded the data into a sql database.
+---
 
+## Documentation
 
-Include visualizations using tools like:
-Python (Matplotlib, hvplot, etc.)
-JavaScript (Plotly, Leaflet, etc.)
- We used a combination of visusalizations such as bar charts, scatter plots, pair plots, line graphs, and boxen plots.
+### **Database Selection Reasoning**
+- SQL was chosen for its efficient table creation and data querying capabilities, making it ideal for creating visualizations.
 
-A new visualization library
+### **ETL Workflow Diagram/ERD**
+- Created using [QuickDBD](https://www.quickdbd.com), with the diagram included in the `Resources` folder.
 
-Include user interaction (required for Visualization, optional for Engineering):
-HTML menus, dropdowns, or textboxes
-Flask backend with API routes
-Filtering or selecting data for custom views
- We used Dash to create an web browser view of analytics, with dropdown usability.
+---
 
-Include a method to display or serve data, such as:
-Pandas DataFrame
-Flask API with JSON output
- We used various pandas dataframes throughout. 
-
-Final visualization should include at least three different views (Visualization track)
- We're including 5 visualizations in the presentation.
-
-Use one additional library related to visualization or data engineering not taught in class
-  Dash
-
-Include documentation with:
-Database selection reasoning
- SQL database was the right choice for building tables, and querying data to create visualizations.
-
-ETL workflow diagram or ERD
- Quickdbd.com was used to create the ERD. Image included inside Resources.
-
-
-
-Other resources used:
-Chat GBT - this was used mainly for the Dash section, as it was a brand new type of coding and unfamiliar to us. This allowed us to structure to code correctly in order for everything to work correctly. 
+## Other Resources
+- **Chat GPT/Copilot:** Assisted mainly with the Dash section, helping to structure code for effective implementation.
